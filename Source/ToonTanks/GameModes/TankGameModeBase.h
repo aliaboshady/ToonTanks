@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
 #include "ToonTanks/Pawns/PawnTank.h"
+#include "ToonTanks/PlayerControllers/PlayerControllerBase.h"
 #include "TankGameModeBase.generated.h"
 
 UCLASS()
@@ -19,12 +20,16 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent)
 	void GameOver(bool PlayerWon);
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Game Loop")
+	int32 StartDelay = 3;
+
 private:
 	void HandleGameStart();
 	void HandleGameOver(bool PlayerWon);
 	int32 GetTargetTurretCount();
 	APawnTank *PlayerTank;
 	int32 TargetTurrets = 0;
+	APlayerControllerBase* PlayerControllerRef;
 	
 public:
 	void ActorDied(AActor* DeadActor);
