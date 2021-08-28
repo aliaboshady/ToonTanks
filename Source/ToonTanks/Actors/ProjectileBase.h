@@ -29,6 +29,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Damage", meta=(AllowPrivateAccess="true"))
 	float Damage = 50;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Lifespan", meta=(AllowPrivateAccess="true"))
+	float Lifespan = 2;
+
 public:	
 	AProjectileBase();
 };

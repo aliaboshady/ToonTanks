@@ -17,5 +17,5 @@ AProjectileBase::AProjectileBase()
 void AProjectileBase::BeginPlay()
 {
 	Super::BeginPlay();
-	InitialLifeSpan = 3;
+	SetLifeSpan(Lifespan);
 }
