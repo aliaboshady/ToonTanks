@@ -40,6 +40,15 @@ private:
 
 	UPROPERTY(EditAnywhere, Category="Effects")
 	UParticleSystem* HitParticle;
+
+	UPROPERTY(EditAnywhere, Category="Effects")
+	USoundBase* HitSound;
+
+	UPROPERTY(EditAnywhere, Category="Effects")
+	USoundBase* LaunchSound;
+
+	UPROPERTY(EditAnywhere, Category="Effects")
+	 TSubclassOf<UMatineeCameraShake> HitShake;
 	
 public:	
 	AProjectileBase();
