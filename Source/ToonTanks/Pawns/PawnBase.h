@@ -14,7 +14,6 @@ class TOONTANKS_API APawnBase : public APawn
 protected:
 	void RotateTurret(FVector LookAtTarget);
 	void Fire();
-	virtual void HandleDestruction();
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta=(AllowPrivateAccess="true"))
@@ -34,4 +33,6 @@ private:
 
 public:
 	APawnBase();
+	void PawnDestroyed();
+	virtual void HandleDestruction();
 };

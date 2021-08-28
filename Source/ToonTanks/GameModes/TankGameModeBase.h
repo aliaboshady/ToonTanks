@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "ToonTanks/Pawns/PawnTank.h"
 #include "TankGameModeBase.generated.h"
 
 UCLASS()
@@ -21,6 +22,9 @@ protected:
 private:
 	void HandleGameStart();
 	void HandleGameOver(bool PlayerWon);
+	int32 GetTargetTurretCount();
+	APawnTank *PlayerTank;
+	int32 TargetTurrets = 0;
 	
 public:
 	void ActorDied(AActor* DeadActor);
