@@ -31,6 +31,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Projectile Type", meta=(AllowPrivateAccess="true"))
 	TSubclassOf<AProjectileBase> ProjectileClass;
 
+	UPROPERTY(EditAnywhere, Category="Effects")
+	UParticleSystem* DeathParticle;
+
 public:
 	APawnBase();
 	void PawnDestroyed();

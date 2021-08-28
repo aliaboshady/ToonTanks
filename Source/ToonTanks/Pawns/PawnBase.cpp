@@ -1,5 +1,7 @@
 #include "PawnBase.h"
 
+#include "Kismet/GameplayStatics.h"
+
 
 APawnBase::APawnBase()
 {
@@ -44,6 +46,7 @@ void APawnBase::Fire()
 
 void APawnBase::HandleDestruction()
 {
+	UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticle, GetActorLocation());
 }
 
 void APawnBase::PawnDestroyed()

@@ -27,7 +27,7 @@ private:
 	void HandleGameStart();
 	void HandleGameOver(bool PlayerWon);
 	int32 GetTargetTurretCount();
-	APawnTank *PlayerTank;
+	APawnTank* PlayerTank;
 	int32 TargetTurrets = 0;
 	APlayerControllerBase* PlayerControllerRef;
 	
